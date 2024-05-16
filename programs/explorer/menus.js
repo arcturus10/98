@@ -432,14 +432,13 @@ var menus = {
 			item: "&Home Page",
 			shortcut: "Alt+Home",
 			action: () => {
-				go_home();
+				go_to("https://arcturus10.github.io/Windows-10-start-menu/WebStart/")
 			},
 			description: "Goes to your home page.",
 		},
 		{
 			item: "Channel &Guide",
 			action: () => {
-				// http://interdimensionalcable.io/ doesn't work because of HTTP vs HTTPS (Mixed Content)
 				go_to("https://topotech.github.io/interdimensionalcable/");
 			},
 			description: "Opens the Channel Guide Web page.",
@@ -447,10 +446,15 @@ var menus = {
 		{
 			item: "&Search the Web",
 			action: () => {
-				// Can you find a search engine that supports iframes?
-				// This is a fun alternative, although it'd be nicer if it was thematic (i.e. retro)
-				go_to("https://mrdoob.com/projects/chromeexperiments/google-gravity/index.html");
+				go_to("https://www.bing.com/search?q=Windows+98");
 			},
+		},
+		{
+			item: "&Wikipedia",
+			action:()=>{
+				//An Encyclopedia is a Must!
+				go_to("https://www.wikipedia.org/")
+			}
 		},
 		MENU_DIVIDER,
 		{
@@ -464,12 +468,9 @@ var menus = {
 		{
 			item: "&Internet Call",
 			action: () => {
-				// @TODO: host a configured version in order to theme it,
-				// maybe allow sharing individual windows on the 98.js desktop?
-				// How much of NetMeeting should I implement? :P
-				go_to("https://brie.fi/ng/98?audio=1&video=1&fs=0&invite=0&share=0&chat=1");
+				window.open("https://meet.google.com/");
 			},
-			description: "Opens your Internet call and meeting program.",
+			description: "Opens your Internet call and meeting program. (Opens in a new Window)",
 		},
 	],
 	"F&avorites": [
@@ -552,29 +553,7 @@ var menus = {
 		}
 	],
 };
-
-// @TODO: let menus go outside the window (outside the iframe)
-// This app is a bit special, because it has a menu bar that can be
-// dragged around.
-
-// var go_outside_frame = false;
-// if (frameElement) {
-// 	try {
-// 		if (parent.MenuBar) {
-// 			MenuBar = parent.MenuBar;
-// 			go_outside_frame = true;
-// 		}
-// 	} catch (e) { }
-// }
 var menu_bar = new MenuBar(menus);
-// if (go_outside_frame) {
-// 	$(menu_bar.element).insertBefore(frameElement);
-// } else {
-// 	$(function () {
-// 		$(menu_bar.element).prependTo("body");
-// 	});
-// }
-
 $(function () {
 	$("#menu-bar-toolbar").append(menu_bar.element);
 });

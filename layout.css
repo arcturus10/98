@@ -6,6 +6,7 @@ html, body {
 	padding: 0;
 	border: 0;
 	overflow: hidden;
+	background-image:url("mountain.jpg")
 }
 .start-menu {
 	position: absolute !important; /* XXX overriding relative; could instead of using :after use border-image */
