@@ -192,7 +192,7 @@ var go_to = async function (address, action_name = "go") {
 			src: address,
 			allowfullscreen: "allowfullscreen",
 			sandbox: "allow-same-origin allow-scripts allow-forms allow-pointer-lock allow-modals allow-popups",
-			allow: "camera https://brie.fi;microphone https://brie.fi",
+			allow: "fullscreen",
 		}).appendTo("#content");
 
 		enhance_iframe($iframe[0]);
