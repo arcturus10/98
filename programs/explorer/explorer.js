@@ -366,7 +366,7 @@ async function render_folder_template(folder_view, address, eventHandlers) {
 		htt = `
 			<object border=0 tabindex=1 classid="clsid:1820FED0-473E-11D0-A96C-00C04FD705A2" style="height: 100%; width: 100%;"></object>
 		`;
-		template_url = "https://isaiahodhner.io/lock-ness-monster/sorry"; // valid URL, but nonsense (I'm a little bit tired so doing things stupidly)
+		template_url = "https://no-thanks.invalid";
 	} else {
 		// @TODO: load FOLDER.HTT from the folder we're showing, if it exists
 		const template_file_name =
