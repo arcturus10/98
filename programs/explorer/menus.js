@@ -449,13 +449,6 @@ var menus = {
 				go_to("https://www.bing.com/search?q=Windows+98");
 			},
 		},
-		{
-			item: "&Wikipedia",
-			action:()=>{
-				//An Encyclopedia is a Must!
-				go_to("https://www.wikipedia.org/")
-			}
-		},
 		MENU_DIVIDER,
 		{
 			item: "My &Computer",
@@ -486,11 +479,19 @@ var menus = {
 			description: "Opens the Favorites folder.",
 		},
 		MENU_DIVIDER,
-		// @TODO: populate with favorites
-		// description and tooltip should be the URL of the item
+		//The Favourites
 		{
-			item: "(Empty)",
-			enabled: false,
+			item: "&Wikipedia",
+			action:()=>{
+				go_to("https://www.wikipedia.org/")
+			},
+			description: "Know it all!",
+		},
+		{
+			item: "&Google",
+			action:()=>{
+				go_to("https://www.google.com/search?igu=1")
+			},
 		},
 	],
 	"&Tools": [
