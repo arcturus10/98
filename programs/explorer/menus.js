@@ -493,6 +493,18 @@ var menus = {
 				go_to("https://www.google.com/search?igu=1")
 			},
 		},
+		{
+			item: "&Periodic Table of Elements - Game Mode",
+			action:()=>{
+				go_to("https://pubchem.ncbi.nlm.nih.gov/periodic-table/#view=game")
+			},
+		},
+		{
+			item: "Periodic Table of Elements",
+			action:()=>{
+				go_to("https://pubchem.ncbi.nlm.nih.gov/periodic-table/png/Periodic_Table_of_Elements_w_Chemical_Group_Block_PubChem.png")
+			}
+		}
 	],
 	"&Tools": [
 		// @TODO: this shows up if Exploring (right click, Explore)
